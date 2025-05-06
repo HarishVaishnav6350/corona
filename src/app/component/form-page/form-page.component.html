@@ -1,0 +1,132 @@
+<div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+<section id="contact" class="contact section">
+    <!-- Section Title -->
+   
+    <!-- End Section Title -->
+
+    <div class="container"  >
+      <div class="row gy-4">
+        <div class="col-lg-6">
+          <div class="row gy-4">
+            <div class="col-lg-12">
+              <div
+                class="info-item d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <i class="bi bi-geo-alt"></i>
+                <h3>Address</h3>
+                <p>59, 1st floor, 1st Avenue,</p>
+                <p>Teachers colony, HSR layout Bangalore 560034</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+
+            <div class="col-md-6">
+              <div
+                class="info-item d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <i class="bi bi-telephone"></i>
+                <h3>Call Us</h3>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+
+            <div class="col-md-6">
+              <div
+                class="info-item d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <i class="bi bi-envelope"></i>
+                <h3>Email Us</h3>
+                <p>info&#64;airsme.in</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <form
+            class="php-email-form"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            [formGroup]="form"
+          >
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="First Name"
+                  formControlName="firstName"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  name="lastname"
+                  class="form-control"
+                  placeholder="Last Name"
+                  formControlName="lastName"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Ex-sdf@fhj.com"
+                  formControlName="email"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="mobile"
+                  placeholder="+91 123456789"
+                  formControlName="mobileNumber"
+                />
+              </div>
+
+              <div class="col-md-12">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="4"
+                  placeholder="Message"
+                  formControlName="description"
+                ></textarea>
+              </div>
+              <button type="submit" (click)="onSubmit()" class="btn btn-primary btn-sm">Send Message</button>
+
+              <!-- <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">
+                  Your message has been sent. Thank you!
+                </div>
+
+              </div> -->
+            </div>
+            <!-- <div *ngIf="formSub===true"  >
+              <h3 >    Our  Team  connect  you  soon <i class=" icons bi bi-emoji-smile"></i></h3>
+               <img src="assets/img/success.png" class="img-fluid" alt="" />
+            </div> -->
+          </form>
+        </div>
+        <!-- End Contact Form -->
+      </div>
+    </div>
+
+    
+  </section>
+  </div>

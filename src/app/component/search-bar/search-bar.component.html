@@ -1,0 +1,42 @@
+<div class="input-group mb-3" >
+    <input type="text" class="form-control" placeholder="Search" 
+    [(ngModel)]="searchTerm" (input)="onSearch()"
+     aria-label="Search" aria-describedby="button-addon2"
+    aria-label="Search" aria-describedby="button-addon2">
+    <button class="btn btn-outline-primary" type="button" id="button-addon2" (click)="onSearch()">Search</button>
+  </div>
+<!-- Display search results -->
+<div *ngIf="searchTerm"  >
+    <ul class="list-group list-group-flush position-absolute" style="z-index: 1000; width: 85%; max-height: 300px; border:solid; border-color: darkgrey;
+     overflow-y: auto; border-radius: 10px; transition: cubic-bezier(0.165, 0.84, 0.44, 1);">
+      <li
+        class="list-group-item d-flex align-items-center"
+        *ngFor="let result of formresult"
+        (click)="window(result.url)"
+        style="cursor: pointer"
+      >
+        <img
+          src={{result.urlToImage}}
+          alt="Image"
+          width="50"
+          height="50"
+          class="me-3 rounded"
+        />
+        <div>
+          <strong>{{ result.title }}</strong><br />
+          <small class="text-muted">{{ result.description }}</small>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="noData===true" >
+    <ul class="list-group position-absolute d-flex justify-content-center align-items-center bg-light" style="z-index: 1000; width: 85%; max-height: 300px; height: 100px; border:solid; border-color: darkgrey;
+     overflow-y: auto; border-radius: 10px; transition: cubic-bezier(0.165, 0.84, 0.44, 1);">
+    
+    <h2 style="color: red;" >Opps sorry no data found !!</h2>
+      
+  
+     
+    </ul>
+  </div>
+  

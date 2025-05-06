@@ -1,0 +1,52 @@
+
+
+
+
+@defer{
+  <app-search-bar [filteredData]="nor" 
+  ></app-search-bar>
+<div class="container mt-4"  @fadeSlideIn >
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let news of nor">
+        <div class="rounded-top-pil card h-100 shadow-sm"  >
+          <a href="{{news.url}}">
+            <img  [src]="news.urlToImage" 
+              class="img-fluid" style="height: 200px;width:500px;" alt="{{ news.title }}"
+              (error)="handleImgError($event)">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{{ news.title |slice: 0 :50 }}</h5>
+            <p class="card-text">{{ news.description | slice :0:80 }}</p>
+          </div>
+          <button class="btn btn-primary"  (click)="window(news.url)">Read More</button>
+
+          <div class="card-footer">
+            <small class="text-muted">Published on {{ news.publishedAt | date:'medium' }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+
+
+  @placeholder(minimum 3000ms){  <div class="container mt-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 ">
+      <div class="col" *ngFor="let s of fakeArray">
+        <div class="card" style="width: 100%;">
+          <div class="placeholder-glow p-3" >
+            <div class="placeholder col-12 mb-3" style="height: 150px;"></div>
+            <h5 class="card-title placeholder col-6"></h5>
+            <p class="card-text placeholder col-7"></p>
+            <p class="card-text placeholder col-4"></p>
+        <a class="btn btn-primary disabled placeholder col-12 mt-2"></a>
+
+          
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  }

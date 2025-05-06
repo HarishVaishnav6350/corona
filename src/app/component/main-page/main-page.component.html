@@ -1,0 +1,2 @@
+<section id="databinding">  <app-data-binding [RenderData]="sharedData" #DataBindingComponent  > </app-data-binding></section>
+<section id="form"> <app-form-page (sendData)="receivedData($event)" *ngIf="!DataBindingComponent.formPage"  > </app-form-page></section>

@@ -1,0 +1,390 @@
+[
+    { "id":1,
+      "week": "Week 1",
+      "day": "Day 1",
+      "topic": "Angular Basics + Components",
+      "completed": true,
+      "subtopics": [
+        "Angular architecture overview",
+        "Component creation and nesting",
+        "Lifecycle hooks: ngOnInit, ngOnDestroy etc.",
+        "@Input() and @Output() decorators",
+        "Creating and using custom pipes"
+      
+      ],
+      "complete": 15
+
+    },
+    { "id":2,
+      "week": "Week 1",
+      "day": "Day 2",
+      "complete": 25,
+      "topic": "Directives and Templates",
+      "completed": true,
+      "subtopics": [
+        "Structural directives (*ngIf, *ngFor)",
+        "Attribute directives (ngClass, ngStyle)",
+        "Custom directives",
+        "Dynamic template generation"
+      ]
+    },
+    {  "id":3,
+      "week": "Week 1",
+      "day": "Day 3",
+      "complete": 35,
+
+      "topic": "Change Detection and Zones",
+      "completed": false,
+      "subtopics": [
+        "Default vs OnPush strategy",
+        "ChangeDetectorRef usage",
+        "NgZone and zone.js internals"
+      ]
+    },
+    {  "id":4,
+      "week": "Week 1",
+      "day": "Day 4",
+      "complete": 5,
+
+      "topic": "Forms - Template vs Reactive",
+      "completed": false,
+      "subtopics": [
+        "Template-driven form syntax and binding",
+        "ReactiveFormsModule setup",
+        "FormControl, FormGroup, FormBuilder usage",
+        "Form validation and error messages"
+      ]
+    },
+    {  "id":5,
+      "week": "Week 1",
+      "complete": 5,
+      "day": "Day 5",
+      "topic": "Advanced Forms Techniques",
+      "completed": false,
+      "subtopics": [
+        "Dynamic form fields",
+        "Custom form validators",
+        "Async validators",
+        "FormArray usage"
+      ]
+    },
+    {  "id":6,
+      "week": "Week 1",
+      "complete": 5,
+      "day": "Day 6",
+      "topic": "Routing Basics",
+      "completed": false,
+      "subtopics": [
+        "Basic routing and navigation",
+        "Route parameters and query params",
+        "RouterLink and routerLinkActive",
+        "Route configuration"
+      ]
+    },
+    {  "id":7,
+      "week": "Week 1",
+      "complete": 5,
+      "day": "Day 7",
+      "topic": "Routing Advanced Topics",
+      "completed": false,
+      "subtopics": [
+        "Lazy loading modules",
+        "Route guards (AuthGuard, CanDeactivate)",
+        "Preloading strategies",
+        "Nested and child routes"
+      ]
+    },
+    {  "id":8,
+      "week": "Week 2",
+      "complete": 5,
+      "day": "Day 8",
+      "topic": "Services & Dependency Injection",
+      "completed": false,
+      "subtopics": [
+        "Creating and injecting services",
+        "Injectable decorator",
+        "Hierarchical injectors and providers",
+        "Singleton vs multiple instances",
+        "Using services for component communication"
+      ]
+    },
+    {  "id":9,
+      "week": "Week 2",
+      "complete": 5,
+      "day": "Day 9",
+      "topic": "HTTP Client & API Integration",
+      "completed": false,
+      "subtopics": [
+        "HttpClientModule setup",
+        "GET/POST/PUT/DELETE operations",
+        "Handling errors with HttpInterceptor",
+        "Observables and async pipe",
+        "Loading indicators for API calls"
+      ]
+    },
+    {  "id":10,
+      "week": "Week 2",
+      "complete": 5,
+      "day": "Day 10",
+      "topic": "Observables and RxJS Basics",
+      "completed": false,
+      "subtopics": [
+        "Introduction to Observables",
+        "RxJS Operators: map, filter, tap, take",
+        "Subjects and BehaviorSubjects",
+        "Subscription management",
+        "Avoiding memory leaks"
+      ]
+    },
+    {  "id":11,
+      "week": "Week 2",
+      "complete": 5,
+      "day": "Day 11",
+      "topic": "State Management with RxJS",
+      "completed": false,
+      "subtopics": [
+        "Component state vs application state",
+        "Using BehaviorSubject for state sharing",
+        "Immutable patterns",
+        "Local state management techniques",
+        "Smart vs dumb components"
+      ]
+    },
+    {  "id":12,
+      "week": "Week 2",
+      "complete": 25,
+      "day": "Day 12",
+      "topic": "Environment Setup & Configurations",
+      "completed": false,
+      "subtopics": [
+        "Using environment.ts for configs",
+        "Setting up prod and dev environments",
+        "Angular CLI build configurations",
+        "File replacements during build"
+      ]
+    },
+    {  "id":13,
+      "week": "Week 2",
+      "complete": 0,
+      "day": "Day 13",
+      "topic": "Lazy Loading and Code Splitting",
+      "completed": false,
+      "subtopics": [
+        "Why lazy load?",
+        "Creating lazy-loaded modules",
+        "LoadChildren in routes",
+        "Preloading strategies",
+        "Performance considerations"
+      ]
+    },
+    { "id":14,
+      "week": "Week 2",
+      "complete": 0,
+      "day": "Day 14",
+      "topic": "Reusable Components and Modules",
+      "completed": false,
+      "subtopics": [
+        "Organizing shared components",
+        "Barrel files (index.ts)",
+        "Creating feature modules",
+        "Exporting and importing modules",
+        "Reusable UI patterns"
+      ]
+    }, 
+    {  "id":15,
+      "week": "Week 3",
+      "complete": 0,
+      "day": "Day 15",
+      "topic": "Angular Animations",
+      "completed": false,
+      "subtopics": [
+        "Setup and importing BrowserAnimationsModule",
+        "Basic animations with state and transition",
+        "Keyframes and multi-step animations",
+        "Animation triggers and bindings",
+        "Route transition animations"
+      ]
+    },
+    {  "id":16,
+      "week": "Week 3",
+      "complete": 0,
+      "day": "Day 16",
+      "topic": "Unit Testing Components",
+      "completed": false,
+      "subtopics": [
+        "Setting up TestBed",
+        "Writing tests for components using Jasmine",
+        "Spying and mocking dependencies",
+        "Testing input/output and DOM",
+        "Code coverage strategies"
+      ]
+    },
+    {  "id":17,
+      "week": "Week 3",
+      "complete": 5,
+      "day": "Day 17",
+      "topic": "Unit Testing Services and Pipes",
+      "completed": false,
+      "subtopics": [
+        "Writing service tests with mocked HttpClient",
+        "Testing observables and asynchronous code",
+        "Testing pure and impure pipes",
+        "Using fakeAsync and tick"
+      ]
+    },
+    { "id":18,
+      "week": "Week 3",
+      "complete": 5,
+      "day": "Day 18",
+      "topic": "End-to-End Testing with Protractor",
+      "completed": false,
+      "subtopics": [
+        "Protractor setup in Angular",
+        "Writing basic E2E specs",
+        "Element selectors and actions",
+        "Async waits and navigation",
+        "Running tests via CLI"
+      ]
+    },
+    { "id":19,
+      "week": "Week 3",
+      "complete": 5,
+      "day": "Day 19",
+      "topic": "Building and Deploying Angular Apps",
+      "completed": false,
+      "subtopics": [
+        "ng build and optimization flags",
+        "Production builds and AOT",
+        "Deploying to Firebase Hosting",
+        "Deploying to GitHub Pages",
+        "Basic deployment to Vercel/Netlify"
+      ]
+    },
+    {  "id":20,
+      "week": "Week 3",
+      "complete": 5,
+      "day": "Day 20",
+      "topic": "Progressive Web Apps (PWA)",
+      "completed": false,
+      "subtopics": [
+        "What is a PWA?",
+        "Setting up Angular as a PWA",
+        "Service workers and caching strategies",
+        "Offline support",
+        "Manifest and icons setup"
+      ]
+    },
+    { "id":21,
+      "week": "Week 3",
+      "complete": 5,
+      "day": "Day 21",
+      "topic": "Accessibility in Angular",
+      "completed": false,
+      "subtopics": [
+        "ARIA roles and attributes",
+        "Keyboard navigation support",
+        "Color contrast and visual hierarchy",
+        "Screen reader compatibility",
+        "Best practices for accessible components"
+      ]
+    },
+    { "id":22,
+      "week": "Week 4",
+      "complete": 5,
+      "day": "Day 22",
+      "topic": "Form Validation Best Practices",
+      "completed": false,
+      "subtopics": [
+        "Built-in validators (required, minLength, etc.)",
+        "Custom validators (sync & async)",
+        "Validation messages and UI feedback",
+        "Handling errors with FormGroup/FormControl",
+        "Disabling/enabling form fields dynamically"
+      ]
+    },
+    { "id":23,
+      "week": "Week 4",
+      "complete": 5,
+      "day": "Day 23",
+      "topic": "Advanced Routing Techniques",
+      "completed": false,
+      "subtopics": [
+        "Route guards: CanActivate, CanDeactivate",
+        "Resolvers for preloading data",
+        "Lazy loading with preloading strategies",
+        "Wildcard and fallback routes",
+        "Dynamic route parameters"
+      ]
+    },
+    {  "id":24,
+      "week": "Week 4",
+      "complete": 5,
+      "day": "Day 24",
+      "topic": "Internationalization (i18n)",
+      "completed": false,
+      "subtopics": [
+        "Setting up Angular i18n",
+        "Extracting and translating text",
+        "Using ngx-translate for dynamic i18n",
+        "Locale switching",
+        "Handling pluralization and formatting"
+      ]
+    },
+    { "id":25,
+      "week": "Week 4",
+      "complete": 5,
+      "day": "Day 25",
+      "topic": "Working with Third-Party Libraries",
+      "completed": false,
+      "subtopics": [
+        "Installing and using external packages",
+        "ngx-bootstrap, Angular Material, PrimeNG overview",
+        "Integrating charts and maps",
+        "Best practices with third-party tools",
+        "Tree shaking and performance impact"
+      ]
+    },
+    {  "id":26,
+      "week": "Week 4",
+      "complete": 5,
+      "day": "Day 26",
+      "topic": "Security in Angular Applications",
+      "completed": false,
+      "subtopics": [
+        "Sanitizing inputs and preventing XSS",
+        "Content Security Policy (CSP)",
+        "Authentication best practices",
+        "Route protection and role-based access",
+        "JWT token storage and HTTP interceptor security"
+      ]
+    },
+    {  "id":27,
+      "week": "Week 4",
+      "complete": 5,
+      "day": "Day 27",
+      "topic": "Integrating Angular with Backend APIs",
+      "completed": false,
+      "subtopics": [
+        "REST API integration strategies",
+        "Using environment variables for URLs",
+        "Token-based authentication",
+        "Error handling and retry logic",
+        "Real-world architecture example"
+      ]
+    },
+    {  "id":28,
+      "week": "Week 4",
+      "complete": 5,
+      "day": "Day 28",
+      "topic": "Real-World Project Build & Review",
+      "completed": false,
+      "subtopics": [
+        "Planning a mini Angular project",
+        "Folder structure and module design",
+        "Form integration and validation",
+        "API calls and state handling",
+        "Final deployment and review"
+      ]
+    }
+  ]
+  

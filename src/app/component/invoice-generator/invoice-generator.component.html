@@ -1,0 +1,302 @@
+<div class="container my-4" *ngIf="!showInvoice()">
+  <div class="card shadow">
+    <div class="card-body">
+      <form [formGroup]="invoices">
+        <h3 class="mb-4 border-bottom pb-2">Customer Details</h3>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="firstName"
+              placeholder="Enter first name"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="lastName"
+              placeholder="Enter last name"
+            />
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="email"
+              placeholder="example@email.com"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Phone Number</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="mobile"
+              placeholder="Enter phone number"
+            />
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label">District</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="district"
+              placeholder="Enter district"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">State</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="state"
+              placeholder="Enter state"
+            />
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Address Line 1</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="address1"
+              placeholder="Enter address line 1"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Address Line 2</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="address2"
+              placeholder="Enter address line 2"
+            />
+          </div>
+        </div>
+
+        <h3 class="my-4 border-bottom pb-2">Product Details</h3>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Company</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="company"
+              placeholder="Enter company"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Model Date</label>
+            <input
+              type="date"
+              class="form-control"
+              formControlName="model"
+              placeholder="Enter model date"
+            />
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Price</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="price"
+              placeholder="Enter price"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Description</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="description"
+              placeholder="Enter description"
+            />
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Make</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="make"
+              placeholder="Enter make"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Owner</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="owner"
+              placeholder="Enter owner name"
+            />
+          </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-6">
+            <label class="form-label">RC Number</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="rc"
+              placeholder="Enter RC number"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Payment Mode</label>
+            <select class="form-select" formControlName="payment">
+              <option value="" selected disabled>Select payment mode</option>
+              <option value="cheque">Cheque</option>
+              <option value="cash">Cash</option>
+              <option value="finance">Finance</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="text-end">
+          <button
+            type="submit"
+            class="btn btn-primary px-4"
+            (click)="onSubmit()"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Invoice Section -->
+
+<div
+  #invoiceSection
+  id="invoiceSection"
+  *ngIf="showInvoice()"
+  class="container mt-5"
+>
+  <div class="card shadow-lg border-0">
+    <div class="card-body p-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="text-primary mb-0">{{ franchiseName }}</h2>
+          <small class="text-muted">GST No: {{ gstNumber }}</small>
+        </div>
+        <div class="text-end">
+          <h4 class="mb-1">INVOICE</h4>
+          <div><strong>Invoice #:</strong> {{ invoiceNumber }}</div>
+          <div><strong>Date:</strong> {{ date }}</div>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h5 class="text-dark">Customer</h5>
+          <p class="mb-1">
+            {{ submittedData.firstName }}+ {{ submittedData.lastName }}
+          </p>
+          <p class="mb-1">
+            {{ submittedData.address1 }}, {{ submittedData.address2 }}
+          </p>
+          <p class="mb-1">
+            {{ submittedData.district }}, {{ submittedData.state }}
+          </p>
+          <p class="mb-1">Phone: {{ submittedData.mobile }}</p>
+          <p>Email: {{ submittedData.email }}</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <h5 class="text-dark">Payment Info</h5>
+          <p class="mb-1">
+            <strong>Payment Mode:</strong> {{ submittedData.payment }}
+          </p>
+          <p class="mb-1"><strong>RC Number:</strong> {{ submittedData.rc }}</p>
+          <p class="mb-1"><strong>Owner:</strong> {{ submittedData.owner }}</p>
+        </div>
+      </div>
+
+      <div class="table-responsive mb-4">
+        <table class="table table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th>Company</th>
+              <th>Description</th>
+              <th>Model Date</th>
+              <th>Make</th>
+              <th>Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ submittedData.company }}</td>
+              <td>{{ submittedData.description }}</td>
+              <td>{{ submittedData.model | date }}</td>
+              <td>{{ submittedData.make }}</td>
+              <td>{{ submittedData.price }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <table class="table table-sm border">
+            <tbody>
+              <tr>
+                <th class="bg-light">Subtotal</th>
+                <td>₹{{ submittedData.price }}</td>
+              </tr>
+              <tr>
+                <th class="bg-light">GST (18%)</th>
+                <td>₹{{ submittedData.price * 0.18 | number : "1.2-2" }}</td>
+              </tr>
+              <tr>
+                <th class="bg-success text-white">Total Amount</th>
+                <td class="bg-success text-white fw-bold">
+                  ₹{{ submittedData.price * 1.18 | number : "1.2-2" }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="text-center mt-4 text-muted" style="font-size: 0.9rem">
+        Thank you for your business!<br />
+        {{ franchiseAddress }}
+      </div>
+
+      <div class="text-end mt-3">
+        <button class="btn btn-outline-secondary" (click)="!showInvoice( )">
+          Close
+        </button>
+        <button class="btn btn-outline-secondary me-2" (click)="printInvoice()">
+          🖨️ Print
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

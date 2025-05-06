@@ -1,0 +1,86 @@
+<h3 class="d-flex justify-content-between">
+  {{'Table using inline editting' | titlecase}}
+
+  <i
+    class="bi bi-plus-circle-fill text-success fs-2 me-2"
+    style="cursor: pointer" (click)="showPopup()"
+  ></i>
+</h3>
+
+
+<table class="table table-striped-columns table-bordered table-hover w-100">
+  <thead class="table-success">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">User-Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Web-Site</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userArray; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>
+        <div *ngIf="user.isEdit">
+          <input type="text" [(ngModel)]="user.name" />
+        </div>
+        <div *ngIf="!user.isEdit">
+          {{ user.name }}
+        </div>
+      </td>
+      <td>
+        <div *ngIf="user.isEdit">
+          <input type="text" [(ngModel)]="user.username" />
+        </div>
+        <div *ngIf="!user.isEdit">
+          {{ user.username }}
+        </div>
+      </td>
+      <td>
+        <div *ngIf="user.isEdit">
+          <input type="text" [(ngModel)]="user.email" />
+        </div>
+        <div *ngIf="!user.isEdit">
+          {{ user.email }}
+        </div>
+      </td>
+      <td>
+        <div *ngIf="user.isEdit">
+          <input type="text" [(ngModel)]="user.phone" />
+        </div>
+        <div *ngIf="!user.isEdit">
+          {{ user.phone }}
+        </div>
+      </td>
+      <td>
+        <div *ngIf="user.isEdit">
+          <input type="text" [(ngModel)]="user.website" />
+        </div>
+        <div *ngIf="!user.isEdit">
+          {{ user.website }}
+        </div>
+      </td>
+      <td class="d-flex justify-content-center align-items-center">
+        <div *ngIf="!user.isEdit">
+          <i class="bi bi-pencil-fill p-1" (click)="onEdit(user,i)"></i>
+          <i class="bi bi-trash-fill" (click)="ondelete(i)"></i>
+        </div>
+        <div *ngIf="user.isEdit">
+          <i class="bi bi-floppy-fill p-1"  ></i>
+          <i class="bi bi-x-lg"></i>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-drower-module *ngIf="isPopupVisible"
+ class="sidebar"  
+ @animationTrigger
+  (close)="hidePopup()" 
+   [userData]="selectedUser" 
+   (data)="editData"
+ (data)="addData($event)">
+</app-drower-module>

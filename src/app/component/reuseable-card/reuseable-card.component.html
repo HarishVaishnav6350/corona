@@ -1,0 +1,32 @@
+<h1 style="display: flex; justify-content: center; align-items: center;">&#64;HostBinding and    &#64;HostListner </h1>
+<p>as name say everythin about them they used to bind and listen host </p>
+<p>chalo thora deep chalte h </p>
+<h3>Ganerly what happen ?</h3>
+<p>&#64;HostBinding as name say bind a class or id as &#64;ViewChild bind dom but view child grt the raference of templet element </p>
+<p>if tou want to chang class dinamicly use host bind to bind class and use hostlistner </p>
+<h3>&#64;HostListner</h3>
+<p>as name say its listen event like 'mouseenter,mousehover,click etc..</p>
+<p class="fw-bold fs-5" style="color: red;"><i class="bi bi-exclamation"></i> Import CommonModule to use this</p>
+<div style="background-color: rgb(213, 216, 216);border-radius: 10px; justify-content: center;align-items: center;">
+  <h1 class="h3">hear is code to better understanding</h1>
+  <pre><code> 
+    <h3 class="h3">Html code</h3>
+    <p>{{html}}</p>
+    <p>using this we bind whole div tag usin [class.hovered] we can use hear ngclass also</p>
+</code></pre> 
+<h3 class="h3">Ts code</h3>
+
+<pre><code> 
+  <p>{{ts}}</p>
+</code></pre> 
+
+</div>
+<h1>Example : open console to check</h1>
+
+<div class="card" [class.hovered]="elementClass === 'hovered'" [class.clicked]="elementClass === 'clicked'">
+  <div class="card-content">
+    <h4>Host</h4>
+    <p>Are console open krke dekho hostbinding or hostlistner ka mja.</p>
+  </div>
+</div>
+ 

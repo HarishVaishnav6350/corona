@@ -1,0 +1,38 @@
+<div class="container-fluid full-hight vh-100 " > 
+    <table class="table table-striped ">
+        <thead class="table-success">
+           <tr>
+               <th scope="col">#</th>
+               <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Mobile</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Make</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Payment</th>
+                    <th scope="col">RC</th>
+                    <th scope="col">Owner</th>
+           </tr>
+    
+        </thead>
+        <tbody>
+            <tr *ngFor="let cust of customer; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ cust.firstName }} {{ cust.lastName }}</td>
+                <td>{{ cust.email }}</td>
+                <td>{{ cust.mobile }}</td>
+                <td>{{ cust.description }}</td>
+                <td>{{ cust.model }}</td>
+                <td>{{ cust.make }}</td>
+                <td>{{ cust.price}}</td>
+                <td>{{ cust.payment }}</td>
+                <td>{{ cust.rc }}</td>
+                <td>{{ cust.owner }}</td>
+            </tr>
+        </tbody>
+    
+    
+    </table>
+    
+</div>

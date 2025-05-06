@@ -1,0 +1,84 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .no-border td, .no-border th {
+    vertical-align: top;
+  }
+  .bordered th, .bordered td {
+    border: 1px solid #312c2c;
+    font-size: 13px;
+    /* margin-bottom: 1px; */
+
+  }
+  .fontSize{
+    font-size: 13px;
+    border-left: 1px solid #312c2c;
+    border-top: 1px solid #312c2c;
+  }
+  .header {
+    display: flex;
+    
+
+    align-items: end;
+  }
+  .qr {
+    text-align: right;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .right {
+    text-align: right;
+  }
+  .center {
+    text-align: center;
+    margin-bottom: 1px;
+  }
+  
+  .signature {
+    float: right;
+    text-align: right;
+    margin-top: 40px;
+    font-size: 15px;
+  }
+  .raju td, .raju th {
+    border-left: 1px solid #312c2c;
+    font-size: 13px;
+
+  
+  }
+  .bordered1 th, .bordered1 td {
+    border: 1px solid  #312c2c;
+    font-size: 12px;
+    margin-top: 1px;}
+
+.borders{
+        border: 1px solid #312c2c;
+    }
+.borde{
+        border-bottom: 1px solid #312c2c;
+    }
+.small{
+      font-size: 8px;
+
+    }
+.bor{
+  border-right: 1px solid #312c2c;
+}
+.bordere th, .bordere td {
+  border: 1px solid #312c2c;
+  border-top: none;
+    border-left: none;
+  border-right: none;
+  font-size: 13px;
+  /* margin-bottom: 1px; */
+
+}
+ 
+
+ 
+
+  
+
+ 

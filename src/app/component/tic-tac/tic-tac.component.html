@@ -1,0 +1,18 @@
+<div class="game">
+    <h2>Tic Tac Toe</h2>
+  
+    <div class="board">
+      <button *ngFor="let cell of board; index as i"
+              class="cell"
+              (click)="makeMove(i)">
+        {{ cell }}
+      </button>
+    </div>
+  
+    <div class="status mt-3">
+      <p *ngIf="winner; else playing">🎉 {{ winner }} wins!</p>
+      <ng-template #playing><p>Current Player: {{ currentPlayer }}</p></ng-template>
+      <button class="btn btn-primary mt-3" (click)="reset()">Reset Game</button>
+    </div>
+  </div>
+  

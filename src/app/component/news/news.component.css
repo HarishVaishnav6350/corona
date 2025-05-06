@@ -1,0 +1,56 @@
+.rounded-top-pill {
+    border-top-left-radius: 50rem !important;
+    border-top-right-radius: 50rem !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  .skeleton-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .skeleton-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+  }
+  
+  .skeleton-lines {
+    flex: 1;
+    margin-left: 15px;
+  }
+  
+  .skeleton-line {
+    height: 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+  }
+  
+  .skeleton-line.short {
+    width: 50%;
+  }
+  
+  .skeleton-line.long {
+    width: 80%;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  

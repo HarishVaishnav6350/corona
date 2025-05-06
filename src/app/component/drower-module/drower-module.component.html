@@ -1,0 +1,42 @@
+<div class=" sidebar bg-white  shadow"
+style="width: 450px; height: 85vh; position:absolute; right: 0; top: 75px; overflow-y: auto; border-top-left-radius: 50px;">
+<div class="d-flex justify-content-between align-items-center bg-primary p-2" >
+<h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: aliceblue; margin-left: 20px;">Add User</h5>
+
+<i class="bi bi-x-lg  " (click)="closePopup()" style="font-size: 25px;color: aliceblue;margin-right: 5px; "></i>
+</div>
+<img src="../../../assets/image/add.png" style="width: 100%; height: 4000;">
+
+<form [formGroup]="user" (ngSubmit)="onSubmit()"  >
+<div class="ms-3 p-1">
+ <label class="form-label" style="font-family: 5px;" >Name</label>
+ <input type="text" class="form-control"  formControlName="name"  >
+</div>
+
+<div class="ms-3 p-1 ">
+ <label class="form-label" >Username</label>
+ <input type="text" class="form-control" formControlName="username"  >
+</div>
+
+<div class="ms-3 p-1">
+ <label class="form-label" >Email</label>
+ <input type="email" class="form-control" formControlName="email"  >
+</div>
+<div class="ms-3 p-1">
+    <label class="form-label"  >Mobile</label>
+    <input type="text" class="form-control" formControlName="phone" >
+   </div>
+
+<div class="ms-3 p-1">
+ <label class="form-label" >Website</label>
+ <input type="text" class="form-control" formControlName="website"   >
+</div>
+
+<!-- Add more content to test scrolling if needed -->
+<div></div>
+
+<div class="d-flex justify-content-end p-4">
+ <button class="btn btn-primary " type="submit" (click)="closePopup()">Submit</button>
+</div>
+</form>
+</div>

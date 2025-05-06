@@ -1,0 +1,10 @@
+ /* drower-module.component.css */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* This will make the drawer slide in from the left */
+    width: 300px;
+  }
+  
+ 
+  

@@ -1,0 +1,27 @@
+.text-gradient {
+    background: linear-gradient(to right, #0d6efd, #6610f2);
+    -webkit-background-clip: text; /* Required for Safari/Chrome */
+    background-clip: text;         /* Standard */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Optional: adds fallback */
+  }
+  
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem; /* Optional: add smooth corners */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  .completed {
+    background-color: #28a745; /* Green background for completed topics */
+    color: white;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  

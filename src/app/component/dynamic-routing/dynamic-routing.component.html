@@ -1,0 +1,39 @@
+<div class="container my-5 " style="height: 100vh;">
+    <div class="row justify-content-center">
+        
+
+      <div class="col-md-8">
+        <i class="bi bi-arrow-left-circle-fill fw-bold fs-1 mb-1" style="position: absolute; background-color: none;left: 35vh;"  [routerLink]="['/mastry']"></i>
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+          <div class="row g-0">
+            
+            <div class="col-5">
+                <app-pi-chart
+                [chartData]="[itemData.complete,100-itemData.complete]"
+                [chartLabels]="['Completed', 'Remaining']"
+                [chartColors]="['#198754', '#dee2e6']"
+              ></app-pi-chart>
+
+                       
+    </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h4 class="card-title fw-bold">{{ itemData.topic }}</h4>
+                <p class="card-text text-muted mb-3">Master this topic step-by-step with the subtopics below:</p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li *ngFor="let sub of itemData.subtopics" class="list-group-item">
+                    <i class="bi bi-check-circle-fill text-success me-2 "></i>{{ sub }}
+                  </li>
+                </ul>
+               
+                <button class="btn btn-primary rounded-pill px-4">
+                  <i class="bi bi-lightning-charge-fill me-1"></i> Start Learning
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

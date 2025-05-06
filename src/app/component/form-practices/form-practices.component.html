@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div formArrayName="fields">
+        <div *ngFor="let fieldGroup of fields.controls; let i = index" [formGroupName]="i">
+            <input formControlName="name" placeholder="Enter name" />
+            <input formControlName="email" placeholder="Enter email" />
+            <button type="button" (click)="removeField(i)">Remove</button>
+          </div>
+      
+    </div>
+  
+    <button type="button" (click)="addField()">Add Field</button>
+    <button type="submit">Submit</button>
+  </form>
+  
